@@ -6,13 +6,13 @@
 // testNoteController();
 
 function testNoteControllerGetHTML() {
-  function appDouble() {
+  function AppDouble() {
     this.innerHTML = null;
   };
-  appDouble = new appDouble;
-  noteList = new Notelist;
+  appDouble = new AppDouble;
+  noteList = new NoteList;
   noteList.addNote('testing');
-  noteController = new noteController(noteList);
+  noteController = new NoteController(noteList);
   noteController.getHTML(appDouble);
   if (appDouble.innerHTML === "<ul><li><div>testing</div></li></ul>" ) {
     console.log("Test passed")

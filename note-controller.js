@@ -1,16 +1,16 @@
 
 (function(exports) {
-  function noteController(noteList) {
+  function NoteController(noteList) {
     this.noteList = noteList;
-    this.noteListView = new noteListView(noteList);
+    this.noteListView = new NoteListView(noteList);
   };
 
-  noteController.prototype.getHTML = function (element) {
+  NoteController.prototype.getHTML = function (element) {
     element.innerHTML = this.noteListView.doHTML();
   };
 
-exports.noteController = noteController;
-exports.noteController.getHTML = noteController.getHTML;
+exports.NoteController = NoteController;
+exports.NoteController.getHTML = NoteController.getHTML;
 })(this);
 
 
